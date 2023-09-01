@@ -1,0 +1,104 @@
+:root {
+    --primary: #9C27B0;
+    --darkPrimary: #89119D;
+    --secundary: #FFCE00;
+    --darkSecondary: rgb(233,287,2);
+    --white: #FFF;
+    --black: #000;
+
+    --mainsource: 'Staatliches', cursive;
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family:Arial, Helvetica, sans-serif ;
+    color:var(--white);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1,h2,h3 {
+    text-align: center;
+    color: var(--secundary);
+    font-family: var(--mainsource);
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+/* Header */
+.header {
+    display: flex; 
+    justify-content: center;
+}
+
+.header__logo {
+    margin: 3rem 0;
+}
+/* footer */
+
+.footer {
+    background-color: var(--darkPrimary);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer__text {
+    font-family: var(--mainsource);
+    text-align: center;
+    font-size: 2.2rem;
+}
+/* Navigate*/
+.navigate {
+    background-color: var(--darkPrimary) ;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navigate__link {
+    font-family: var(--mainsource);
+    color: var(--white);
+    font-size: 3rem;
+}
+
+.navigate__link--asset,
+.navigate__link:hover {
+    color: var(--secundary);
+}
