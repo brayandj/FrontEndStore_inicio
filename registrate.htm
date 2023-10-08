@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<?php
+session_start();
+
+if (isset($_SESSION['usuario'])) {
+    header("Location: inicio.php"); // Si el usuario ya está autenticado, redirige a la página de inicio.
+    exit();
+}
+
+require 'conection.php'; // Incluye el archivo de conexión a la base de datos.
+
+$errores = [];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $correo = mysqli_real_escape_string($db, $_POST['correo']);
+    $contrasena = mysqli_real_escape_string($db, $_POST['contrasena']);
+
+    // Buscar al usuario en la base de datos
+    $query = "SELECT * FROM usuarios WHERE correo_electronico = '$correo'";
+    $resultado = mysqli_query($db, $query);
+
+    if ($resultado && mysqli_num_rows($resultado) > 0) {
+        $usuario = mysqli_fetch_assoc($resultado);
+
+        // Verificar la contraseña
+        if (password_verify($contrasena, $usuario['contrasena'])) {
+            $_SESSION['usuario'] = $usuario['nombre_usuario'];
+            header("Location: inicio.php"); // Redirigir al usuario a la página de inicio después del inicio de sesión.
+            exit();
+        } else {
+            $errores[] = "Contraseña incorrecta";
+        }
+    } else {
+        $errores[] = "Correo electrónico no encontrado";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <!-- Tus enlaces a archivos CSS y otros elementos de encabezado aquí -->
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+
+    <?php foreach ($errores as $error) : ?>
+        <div class="alerta error">
+            <?php echo $error; ?>
+        </div>
+    <?php endforeach; ?>
+
+    <form method="POST" action="login.php">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" name="correo" id="correo" required>
+
+        <label for="contrasena">Contraseña</label>
+        <input type="password" name="contrasena" id="contrasena" required>
+
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+</body>
+</html>
