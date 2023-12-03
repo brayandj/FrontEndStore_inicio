@@ -1,54 +1,89 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Encabezado del documento HTML -->
+
 <head>
-    <!-- Encabezado del documento HTML -->
     <meta charset="UTF-8"> <!-- Especifica la codificación de caracteres -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Configuración de la vista en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrontEnd Store</title> <!-- Título de la página en la barra del navegador -->
-    <link rel="stylesheet" href="css/normalize.css">
     <!-- Enlace a una hoja de estilos CSS llamada "normalize.css" -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/normalize.css">
     <!-- Realiza una preconexión al servidor de Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <!-- Realiza una preconexión al servidor de Google Fonts con atributo crossorigin -->
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Enlace a una fuente de Google Fonts llamada "Staatliches" -->
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <!-- Enlace a una hoja de estilos CSS llamada "style.css" -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
+<!-- Cuerpo del documento HTML -->
+
 <body>
-    <!-- Cuerpo del documento HTML -->
+    <!-- Encabezado de la página con clase "header" -->
     <header class="header">
-        <!-- Encabezado de la página con clase "header" -->
+        <!-- Enlace que lleva de regreso al inicio de la página -->
         <a href="index.html">
-            <!-- Enlace que lleva de regreso al inicio de la página -->
-            <img class="header__logo" src="img/logo.png" alt="Logotipo">
             <!-- Imagen del logotipo con clase "header__logo" -->
+            <img class="header__logo" src="img/logo.png" alt="Logotipo">
         </a>
     </header>
 
+    <!-- Barra de navegación con clase "navigate" -->
     <nav class="navigate">
-        <!-- Barra de navegación con clase "navigate" -->
+        <!-- Enlace de navegación con clase "navigate__link" -->
         <a class="navigate__link navigate__link--asset" href="index.html">Tienda</a>
         <!-- Enlace de navegación con clase "navigate__link" -->
         <a class="navigate__link" href="nosotros.html">Nosotros</a>
         <!-- Enlace de navegación con clase "navigate__link" -->
-        <a class="navigate__link" href="identificarse.html">Indentificarse</a>
-        <!-- Enlace de navegación con clase "navigate__link" -->
-        <a class="navigate__link" href="cienteCita.html">Agendar cita</a>  
-    </nav>
-    
-    <main class="container">
-        <!-- Contenedor principal de la página con clase "container" -->
-        <h1>Nuestros Productos</h1>
-        <!-- Encabezado principal de la página -->
+        <!-- <a class="navigate__link" href="identificarse.html">Indentificarse</a>
+        <a class="navigate__link" href="cienteCita.html">Agendar cita</a> -->
+        
+        <div class="navigate--shooping">
+            <!-- https://tablericons.com/ -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-square-rounded" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" />
+                <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
+                <path d="M6 20.05v-.05a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v.05" />
+              </svg>
 
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck-loading" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M2 3h1a2 2 0 0 1 2 2v10a2 2 0 0 0 2 2h15" />
+                <path d="M9 6m0 3a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-4a3 3 0 0 1 -3 -3z" />
+                <path d="M9 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                <path d="M18 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              </svg>
+              
+              <span class="cart-count">0</span>
+
+           <!-- Creamos un intervalo llamado cantidad para imprimir la cantidad de producto" -->
+           <span class="quantity">0</span>
+        </div>
+           <!-- 
+           
+           <div class="list"></div>
+           
+           <div class="card"></div>
+           <h1>Card</h1>
+           <ul class="listCar"></ul>
+           <div class="checkOur">
+            <div class="total">0</div>
+            <div class="closeShooping">Close</div>
+           </div> -->
+    </nav>
+
+    <!-- Contenedor principal de la página con clase "container" -->
+    <main class="container">
+        <!-- Encabezado principal de la página -->
+        <h1>Nuestros Productos</h1>
+
+        <!-- Contenedor de la cuadrícula de productos con clase "grid" -->
         <div class="grid">
-            <!-- Contenedor de la cuadrícula de productos con clase "grid" -->
 
             <!-- Producto 1 -->
             <div class="producto">
@@ -67,7 +102,7 @@
                 </a>
             </div> <!-- Fin del Producto 1 -->
 
-  <!-- Continuar con más productos siguiendo la misma estructura -->
+            <!-- Continuar con más productos siguiendo la misma estructura -->
             <div class="producto">
                 <a href="producto.html">
                     <img class="producto__imagen" src="img/2.jpg" alt="imagen camisa">
@@ -177,7 +212,7 @@
                     </div>
                 </a>
             </div> <!--.producto-->
-            
+
             <div class="producto">
                 <a href="producto.html">
                     <img class="producto__imagen" src="img/13.jpg" alt="imagen camisa">
@@ -197,7 +232,7 @@
                     </div>
                 </a>
             </div> <!--.producto-->
-            
+
             <div class="grafico grafico--camisas"></div>
             <div class="grafico grafico--node"></div>
             <!-- Contenedores de gráficos con clases "grafico" y "grafico--camisas" o "grafico--node" -->
@@ -211,4 +246,5 @@
     </footer>
 
 </body>
+
 </html>

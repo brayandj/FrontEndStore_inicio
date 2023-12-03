@@ -311,3 +311,16 @@ h3 {
     cursor: pointer;
     background-color: var(--darkSecondary);
 }
+
+/* .navigate--shooping  i{
+font-size: 3.5rem;
+
+
+} */
+
+.cart-count {
+    position: absolute;
+    top: -5px; 
+    right: -10px;
+    font-size: 12px; 
+  }
