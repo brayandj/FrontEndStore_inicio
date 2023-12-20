@@ -70,12 +70,24 @@ h3 {
 /* Header */
 .header {
     display: flex;
-    justify-content: center;
-}
+    justify-content: center; 
+    position: relative;
+  }
+  
+  .header-container {
+    padding-right: 50px;
+  }
 
-.header__logo {
+  .header__logo {
     margin: 3rem 0;
-}
+  }
+  
+  .header i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+  }
 
 /* footer */
 .footer {
@@ -317,10 +329,22 @@ font-size: 3.5rem;
 
 
 } */
+.navigate--shopping {
+    position: relative;
+    top: 20px;
+}
 
-.cart-count {
-    position: absolute;
-    top: -5px; 
-    right: -10px;
-    font-size: 12px; 
+.navigate--shopping span{ 
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+justify-content: center;
+align-items: center;
+color: #FFF;
+border-radius: 50%;
+position: absolute;
+top: 40%;
+right: -25px  ;
+ transform: rotate(-10deg);
   }

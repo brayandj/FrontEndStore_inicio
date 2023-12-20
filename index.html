@@ -24,14 +24,27 @@
 
 <body>
     <!-- Encabezado de la página con clase "header" -->
+    <div class="header-container">
     <header class="header">
         <!-- Enlace que lleva de regreso al inicio de la página -->
         <a href="index.html">
             <!-- Imagen del logotipo con clase "header__logo" -->
             <img class="header__logo" src="img/logo.png" alt="Logotipo">
         </a>
+        <i>
+            <div class="navigate--shopping">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck-loading" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+              <path d="M2 3h1a2 2 0 0 1 2 2v10a2 2 0 0 0 2 2h15" />
+              <path d="M9 6m0 3a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-4a3 3 0 0 1 -3 -3z" />
+              <path d="M9 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+              <path d="M18 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+            </svg>
+            <span>0 </span>
+        </div>
+          </i>
     </header>
-
+</div>
     <!-- Barra de navegación con clase "navigate" -->
     <nav class="navigate">
         <!-- Enlace de navegación con clase "navigate__link" -->
@@ -42,28 +55,13 @@
         <!-- <a class="navigate__link" href="identificarse.html">Indentificarse</a>
         <a class="navigate__link" href="cienteCita.html">Agendar cita</a> -->
         
-        <div class="navigate--shooping">
-            <!-- https://tablericons.com/ -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-square-rounded" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" />
-                <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
-                <path d="M6 20.05v-.05a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v.05" />
-              </svg>
-
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-truck-loading" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M2 3h1a2 2 0 0 1 2 2v10a2 2 0 0 0 2 2h15" />
-                <path d="M9 6m0 3a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3v2a3 3 0 0 1 -3 3h-4a3 3 0 0 1 -3 -3z" />
-                <path d="M9 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                <path d="M18 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-              </svg>
-              
-              <span class="cart-count">0</span>
-
-           <!-- Creamos un intervalo llamado cantidad para imprimir la cantidad de producto" -->
-           <span class="quantity">0</span>
-        </div>
+        <!-- https://tablericons.com/ -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-square-rounded" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 13a3 3 0 1 0 0 -6a3 3 0 0 0 0 6z" />
+            <path d="M12 3c7.2 0 9 1.8 9 9s-1.8 9 -9 9s-9 -1.8 -9 -9s1.8 -9 9 -9z" />
+            <path d="M6 20.05v-.05a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v.05" />
+        </svg>
            <!-- 
            
            <div class="list"></div>
